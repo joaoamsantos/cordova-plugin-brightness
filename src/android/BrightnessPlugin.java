@@ -112,11 +112,10 @@ public class BrightnessPlugin extends CordovaPlugin {
 	 * @return
 	 */
 	private boolean getBrightness(JSONArray args, CallbackContext callbackContext) {
-		Double brightness = 0.0;
 		try {
 			Activity activity = cordova.getActivity();
 			WindowManager.LayoutParams layoutParams = activity.getWindow().getAttributes();
-			brightness = (double) layoutParams.screenBrightness;
+			Double brightness = (double) layoutParams.screenBrightness;
 			callbackContext.success(String.valueOf(brightness));
 		} catch (NullPointerException e) {
 			System.out.println("Null pointer exception");
