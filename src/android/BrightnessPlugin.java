@@ -115,7 +115,7 @@ public class BrightnessPlugin extends CordovaPlugin {
 		try {
 			Activity activity = cordova.getActivity();
 			WindowManager.LayoutParams layoutParams = activity.getWindow().getAttributes();
-			Double brightness = (double) layoutParams.screenBrightness;
+			double brightness = (double) layoutParams.screenBrightness;
 			callbackContext.success(String.valueOf(brightness));
 		} catch (NullPointerException e) {
 			System.out.println("Null pointer exception");
