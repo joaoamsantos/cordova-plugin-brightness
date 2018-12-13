@@ -112,7 +112,7 @@ public class BrightnessPlugin extends CordovaPlugin {
 	 * @return
 	 */
 	private Double getBrightness(JSONArray args, CallbackContext callbackContext) {
-		Double brightness = 0.0
+		Double brightness = 0.0;
 		try {
 			Activity activity = cordova.getActivity();
 			WindowManager.LayoutParams layoutParams = activity.getWindow().getAttributes();
